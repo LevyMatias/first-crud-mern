@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-950
+}
+
+input {
+    @apply bg-gray-900 rounded p-3 text-slate-200
+}
+
+label {
+    @apply text-slate-200
+}
