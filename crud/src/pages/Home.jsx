@@ -8,7 +8,7 @@ const Home = () => {
     Axios.defaults.withCredentials = true
 
     useEffect(() => {
-        Axios.get('https://first-crud-mern.vercel.app/')
+        Axios.get('https://first-crud-mern.vercel.app')
             .then(res => {
                 setUsers(res.data)
             })

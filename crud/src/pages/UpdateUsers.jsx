@@ -24,7 +24,7 @@ const UpdateUsers = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    Axios.put('https://first-crud-mern.vercel.app/update/'+id, { name, age, email})
+    Axios.put('https://first-crud-mern.vercel.app/update'+id, { name, age, email})
       .then(res => {
         console.log(res)
         navigate('/')
