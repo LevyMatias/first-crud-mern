@@ -5,9 +5,10 @@ import Axios from 'axios'
 const Home = () => {
     const [users, setUsers] = useState([])
     const navigate = useNavigate()
+    Axios.defaults.withCredentials = true
 
     useEffect(() => {
-        Axios.get('http://localhost:5173/')
+        Axios.get('https://first-crud-mern.vercel.app/')
             .then(res => {
                 setUsers(res.data)
             })
@@ -15,7 +16,7 @@ const Home = () => {
     }, [])
 
     const handleDelete = (id) => {
-      Axios.delete(`http://localhost:5173/delete/${id}`)
+      Axios.delete(`https://first-crud-mern.vercel.app/delete/${id}`)
         .then(res => {
             console.log(res)
             setUsers(users.filter(user => user._id !== id))
