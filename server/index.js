@@ -4,10 +4,16 @@ const cors = require('cors');
 const Users = require('./models/Users');
 
 const app = express();
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'https://first-crud-mern.vercel.app/',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true
+    }
+));
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/crud')
+mongoose.connect('mongodb+srv://levisilvas2018:KBRDKoUtdtHtbAnW@crud-1.l6wy01d.mongodb.net/Crud?retryWrites=true&w=majority&appName=Crud-1')
 
 app.get('/', (req, res) => {
   Users.find()
