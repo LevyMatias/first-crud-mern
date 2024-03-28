@@ -8,7 +8,7 @@ const Home = () => {
     Axios.defaults.withCredentials = true
 
     useEffect(() => {
-        Axios.get('https://first-crud-mern-frontend.vercel.app/')
+        Axios.get('https://first-crud-mern.vercel.app/')
             .then(res => {
                 setUsers(res.data)
             })
@@ -16,7 +16,7 @@ const Home = () => {
     }, [])
 
     const handleDelete = (id) => {
-      Axios.delete(`https://first-crud-mern-frontend.vercel.app/${id}`)
+      Axios.delete(`https://first-crud-mern.vercel.app/delete/${id}`)
         .then(res => {
             console.log(res)
             setUsers(users.filter(user => user._id !== id))

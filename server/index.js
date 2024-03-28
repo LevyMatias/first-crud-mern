@@ -6,7 +6,7 @@ const Users = require('./models/Users');
 const app = express();
 app.use(cors(
     {
-        origin: 'https://first-crud-mern-frontend.vercel.app',
+        origin: 'https://first-crud-mern-frontend.vercel.app/',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true
     }
