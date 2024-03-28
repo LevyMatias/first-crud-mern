@@ -11,7 +11,7 @@ const CreateUsers = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    Axios.post('https://first-crud-mern.vercel.app/create', { name, age, email})
+    Axios.post('https://first-crud-mern-frontend.vercel.app/create', { name, age, email})
       .then(res => {
         console.log(res)
         navigate('/')

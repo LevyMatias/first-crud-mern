@@ -11,7 +11,7 @@ const UpdateUsers = () => {
   Axios.defaults.withCredentials = true
 
   useEffect(() => {
-      Axios.get('https://first-crud-mern.vercel.app/'+id)
+      Axios.get('https://first-crud-mern-frontend.vercel.app/'+id)
           .then(res => {
               console.log(res.data)
               setName(res.data.name)
@@ -24,7 +24,7 @@ const UpdateUsers = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    Axios.put('https://first-crud-mern.vercel.app/update/'+id, { name, age, email})
+    Axios.put('https://first-crud-mern-frontend.vercel.app/'+id, { name, age, email})
       .then(res => {
         console.log(res)
         navigate('/')
